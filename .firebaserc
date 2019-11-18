@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bagel-land-boston": {
+      "hosting": {
+        "BagelLandSite": [
+          "bagel-land-boston"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bagel-land-boston"
+  }
+}

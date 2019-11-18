@@ -1,0 +1,42 @@
+.home-page {
+  /*background-color: red;*/
+  padding-top: 50px;
+  height: 100vh;
+  overflow: auto;
+}
+.head-img{
+  /*background: url('../../assets/h-street.jpg') no-repeat;*/
+  background-size: cover;
+  height: 230px;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+}
+.wrap {
+  flex-wrap: wrap;
+}
+mat-card {
+  max-width: 200px;
+  margin: 5px 10px;
+}
+/*.mask1 {*/
+/*  -webkit-mask-image: l./inear-gradient(to bottom, transparent 25%, black 75%);*/
+/*  mask-image: linear-gradient(to bottom, transparent 25%, black 75%);*/
+/*}*/
+/*.mask1 {*/
+/*  clip-path: polygon(100% 2%, 100% 2%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);*/
+/*  !* Note that percentages work as well as px *!*/
+/*}*/
+.mask1 {
+  clip-path: polygon(0 0, 100% 0, 100% 46%, 0 26%);
+  /*mask-image: linear-gradient(to left, transparent 4%, yellow 95%);*/
+  z-index: -1;
+}
+
+/*clip-path: rectangle(x, y, width, height, rounded-x, rounded-y);*/
+/*.mask1 {*/
+/*  -webkit-mask-image: radial-gradient(circle at 50% 60%, black 50%, rgba(0, 0, 0, 0.6) 50%);*/
+/*  mask-image: radial-gradient(circle at 50% 60%, black 50%, rgba(0, 0, 0, 0.6) 50%);*/
+/*}*/
+.mask3 {
+  -webkit-mask-image: radial-gradient(ellipse 90% 80% at 48% 78%, black 40%, transparent 50%);
+  mask-image: radial-gradient(ellipse 90% 80% at 48% 78%, black 40%, transparent 50%);
+}

@@ -1,0 +1,31 @@
+<div>
+  <h1 style="margin-top: 70px;">IS some thing hefre</h1>
+  <cdk-virtual-scroll-viewport itemSize="100" style="height: 100vh; background-color: pink;">
+
+    <div *cdkVirtualFor="let item of arrNumber" >
+      <p class="animated slideInRight" style="width: 100%;height: 100px;border: solid 2px blue;display: inline-flex;justify-content: center;align-items: center" >
+        {{item}}
+      </p>
+    </div>
+  </cdk-virtual-scroll-viewport>
+</div>
+<!--<cdk-virtual-scroll-viewport style="height: 100vh; width: 100vw;" [itemSize]="10">-->
+<!--  <div *cdkVirtualFor="let p of products;-->
+<!--    let index = index;-->
+<!--                       let count = count;-->
+<!--                       let first = first;-->
+<!--                       let last = last;-->
+<!--                       let even = even;-->
+<!--                       let odd = odd;">-->
+<!--    <mat-card fxFlex="350px" class="course-card mat-elevation-z10">-->
+<!--      <mat-card-header>-->
+<!--        <mat-card-title>{{p?.title}} - {{count}}</mat-card-title>-->
+<!--      </mat-card-header>-->
+<!--      <img mat-card-image [src]="p?.img">-->
+<!--      <mat-card-content>-->
+<!--        <h1 *ngIf="last">LAST ONE!!</h1>-->
+<!--        <p>{{p?.spec}}</p>-->
+<!--      </mat-card-content>-->
+<!--    </mat-card>-->
+<!--  </div>-->
+<!--</cdk-virtual-scroll-viewport>-->

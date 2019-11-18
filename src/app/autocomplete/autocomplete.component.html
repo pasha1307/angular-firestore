@@ -1,0 +1,34 @@
+<div class="wrapper" matAutocompleteOrigin #origin="matAutocompleteOrigin">
+  <mat-form-field appearance="outline" floatLabel="always">
+    <mat-label>First Name</mat-label>
+    <input
+      matInput
+      formControlName="firstname"
+      [matAutocomplete]="auto"
+      [matAutocompleteConnectedTo]="origin"
+    >
+    <mat-autocomplete
+        #auto="matAutocomplete"
+        (optionSelected)="setFormData($event)"
+    >
+      <mat-option *ngFor="let o in options" [value]="o">
+        <div class="option-div">
+          <span>
+            {{o.firstName | titlecase}}
+            {{o.lastName | titlecase}}
+          </span>
+        </div>
+      </mat-option>
+
+    </mat-autocomplete>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Last Name</mat-label>
+    <input
+      matInput
+      formControlName="lastName"
+      [matAutocomplete]="auto"
+      [matAutocompleteConnectedTo]="origin"
+    >
+  </mat-form-field>
+</div>

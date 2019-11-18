@@ -1,0 +1,29 @@
+<div class="row" matAutocompleteOrigin #origin="matAutocompleteOrigin">
+
+  <mat-form-field appearance="outline" floatLabel="always" class="col-xl-6">
+    <mat-label>First Name</mat-label>
+    <input matInput formControlName="firstname" [matAutocomplete]="auto" [matAutocompleteConnectedTo]="origin">
+    <mat-autocomplete #auto="matAutocomplete"  (optionSelected)="setFormData($event)">
+      <mat-option *ngFor="let physician of physicians | async" [value]="physician">
+        <div style="display:flex;flex-wrap: nowrap;align-items:center;justify-content:center;margin: auto;">
+          <span style="flex-grow: 1;flex: 1 1 33%;">
+            {{physician.firstName.toString() | titlecase}}
+            {{physician.lastName.toString() | titlecase}}
+          </span>
+        </div>
+      </mat-option>
+    </mat-autocomplete>
+    <mat-error *ngIf="physicianInfoForm.controls['firstname'].hasError('required')">This field is required
+    </mat-error>
+    <mat-hint class="caption"> *Required</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" floatLabel="always" class="col-xl-6">
+    <mat-label>Last Name</mat-label>
+    <input matInput formControlName="lastname" [matAutocomplete]="auto"
+           [matAutocompleteConnectedTo]="origin">
+    <mat-error *ngIf="physicianInfoForm.controls['lastname'].hasError('required')">This field is required
+    </mat-error>
+    <mat-hint class="caption">*Required</mat-hint>
+  </mat-form-field>
+</div><p>theform works!</p>

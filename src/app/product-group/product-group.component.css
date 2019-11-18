@@ -1,0 +1,65 @@
+.home-page {
+  padding-top: 50px;
+  height: 100vh;
+  overflow: auto;
+  z-index: 0;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.group-info {
+  max-width: 350px;
+  /*background-color: rgba(0,0,0,.2);*/
+  min-height: 300px;
+  max-height: 400px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  border: 2px solid rgba(255,0,0,.3);
+}
+.group-info h2 {
+  margin-bottom: 0;
+}
+.group-info p {
+  line-height: 150%;
+}
+mat-card-actions {
+  text-align: center;
+}
+.head-img{
+  background: url('../../assets/h-street.jpg') no-repeat;
+  background-size: cover;
+  height: 230px;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+}
+.wrap {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  max-width: 72%;
+  flex-wrap: wrap;
+}
+.wrap   > * {
+  margin: 10px;
+}
+mat-card {
+  min-width: 450px;
+  z-index: 999;
+}
+.mask1 {
+  clip-path: polygon(0 0, 100% 0, 100% 46%, 0 26%);
+  /*mask-image: linear-gradient(to left, transparent 4%, yellow 95%);*/
+  z-index: -1;
+}
+.mask3 {
+  mask-image: radial-gradient(ellipse 90% 80% at 48% 78%, black 40%, transparent 50%);
+}
+.spinner-container mat-spinner {
+  margin: 130px auto 0 auto;
+}
+.bottom-toolbar {
+  margin: 30px 0;
+  font-size: 18px;
+}

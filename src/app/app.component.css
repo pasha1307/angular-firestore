@@ -1,0 +1,15 @@
+.navigation-items li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+}
+.navigation-items li a {
+  color: white;
+  text-underline: none;
+  font-weight: 100;
+  text-decoration: none;
+}
+.navigation-items li a:hover {
+  color: rgba(255,255,255,.7);
+}

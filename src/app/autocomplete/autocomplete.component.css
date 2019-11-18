@@ -1,0 +1,10 @@
+.option-div {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.option-div span {
+  flex: 1 1 33%;
+  flex-grow: 1;
+}
